@@ -70,13 +70,18 @@ export function Hero() {
           </span>
           <span className="text-[15px] font-semibold opacity-50">2018 — {new Date().getFullYear()}</span>
         </button>
-        <ul className="hidden md:flex gap-[var(--s30)]">
+        <ul className="order-first md:order-none w-full md:w-auto grid grid-cols-3 md:flex border border-[var(--ink)] md:border-0 md:gap-[var(--s30)] md:mr-[220px]">
           {h.labels.map((label, i) => (
-            <li key={label}>
+            <li key={label} className="border-l border-[var(--ink)] first:border-l-0 md:border-0">
               <button
                 type="button"
                 onClick={() => setCurrent(i)}
-                className={`text-[15px] font-semibold transition-opacity ${i === current ? "opacity-100 underline underline-offset-4" : "opacity-40 hover:opacity-70"}`}
+                aria-pressed={i === current}
+                className={`w-full h-full px-[6px] py-[10px] md:p-0 text-[12px] min-[400px]:text-[13px] md:text-[15px] leading-tight font-semibold text-center transition-colors md:transition-opacity ${
+                  i === current
+                    ? "bg-[var(--ink)] text-white md:bg-transparent md:text-[var(--ink)] md:underline md:underline-offset-4"
+                    : "text-[var(--ink)] md:opacity-40 md:hover:opacity-70"
+                }`}
               >
                 {label}
               </button>

@@ -182,7 +182,7 @@ html { scroll-behavior: smooth; }
 
 /* Vidéo d'accueil : sur téléphone, hauteur calée sur l'écran (place gardée pour « Tout voir » et le bouton Contact) */
 .studio-hero-media {
-  height: max(300px, calc(100svh - var(--head) - var(--s30) - 170px));
+  height: max(300px, calc(100svh - var(--head) - var(--s30) - 190px));
 }
 @media (min-width: 768px) {
   .studio-hero-media { height: auto; aspect-ratio: 16 / 9; }
