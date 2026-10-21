@@ -180,10 +180,11 @@ html { scroll-behavior: smooth; }
   background: #000;
 }
 
-/* Vidéo d'accueil : sur téléphone, hauteur calée sur l'écran (place gardée pour « Tout voir » et le bouton Contact) */
+/* Vidéo d'accueil : carrée sur téléphone (au plus la moitié de l'écran), 16:9 sur ordinateur */
 .studio-hero-media {
-  height: max(300px, calc(100svh - var(--head) - var(--s30) - 190px));
+  aspect-ratio: 1 / 1;
+  max-height: 50svh;
 }
 @media (min-width: 768px) {
-  .studio-hero-media { height: auto; aspect-ratio: 16 / 9; }
+  .studio-hero-media { aspect-ratio: 16 / 9; max-height: none; }
 }

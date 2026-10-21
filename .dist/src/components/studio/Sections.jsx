@@ -118,7 +118,7 @@ export function Intro() {
   const { lang } = useLang();
   return (
     <Spread className="mt-[var(--s150)]">
-      <motion.p {...reveal} lang={lang} className="max-w-[852px] text-[17px] md:text-[18px] font-medium leading-[2] text-justify [hyphens:auto]">
+      <motion.p {...reveal} lang={lang} className="max-w-[852px] text-[17px] md:text-[18px] font-medium leading-[2] text-left md:text-justify [hyphens:auto]">
         {content[lang].intro}
       </motion.p>
     </Spread>
