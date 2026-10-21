@@ -6,8 +6,9 @@ import { ArrowBox, FlagSwitch, LangSwitch } from "./Primitives";
 
 export function Logo({ className = "" }) {
   return (
-    <a href="#top" className={`font-bold tracking-[-0.04em] text-[var(--ink)] leading-none ${className}`}>
-      lmgt<span className="opacity-40">.</span>
+    <a href="#top" aria-label="LMGT" className={`inline-flex items-center gap-[0.18em] font-bold tracking-[-0.04em] text-[var(--ink)] leading-none ${className}`}>
+      <img src="/logo-mark.png" alt="" width="512" height="512" className="h-[1.05em] w-auto" />
+      <span>lmgt<span className="opacity-40">.</span></span>
     </a>
   );
 }
