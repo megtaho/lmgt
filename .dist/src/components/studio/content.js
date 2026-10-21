@@ -55,6 +55,8 @@ export const content = {
       heading: "Écrire un message",
       name: "Nom", email: "Email", subject: "Sujet", message: "Message",
       send: "Envoyer", sending: "Envoi…", success: "Message envoyé ! Nous vous répondons très vite.",
+      error: "L'envoi a échoué. Réessayez ou écrivez-nous directement par email.",
+      direct: "Ou écrivez-nous :",
     },
     footer: {
       cta: "Le but n'est pas de fabriquer, mais de résoudre. Racontez-nous d'abord votre problème.",
@@ -119,6 +121,8 @@ export const content = {
       heading: "Write a message",
       name: "Name", email: "Email", subject: "Subject", message: "Message",
       send: "Send", sending: "Sending…", success: "Message sent! We'll get back to you soon.",
+      error: "Sending failed. Please try again or email us directly.",
+      direct: "Or email us:",
     },
     footer: {
       cta: "The goal isn't to make things, it's to solve problems. Start by telling us yours.",
@@ -183,6 +187,8 @@ export const content = {
       heading: "Escríbenos",
       name: "Nombre", email: "Email", subject: "Asunto", message: "Mensaje",
       send: "Enviar", sending: "Enviando…", success: "¡Mensaje enviado! Te responderemos muy pronto.",
+      error: "No se pudo enviar. Inténtalo de nuevo o escríbenos por email.",
+      direct: "O escríbenos:",
     },
     footer: {
       cta: "El objetivo no es fabricar, sino resolver. Cuéntanos primero tu problema.",

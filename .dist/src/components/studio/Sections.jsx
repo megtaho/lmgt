@@ -262,20 +262,44 @@ export function Projects() {
 const fieldClass =
   "w-full bg-transparent border-0 border-b border-[var(--line)] py-[14px] text-[15px] font-medium text-[var(--ink)] placeholder:text-[var(--text)]/40 focus:outline-none focus:border-[var(--ink)] transition-colors";
 
+const CONTACT_EMAIL = "contact@lmgt.eu";
+
 export function Contact() {
   const { lang } = useLang();
   const f = content[lang].form;
   const [sending, setSending] = useState(false);
   const formRef = useRef(null);
 
-  const onSubmit = (e) => {
+  // Envoi par FormSubmit : chaque message arrive par email sur CONTACT_EMAIL
+  const onSubmit = async (e) => {
     e.preventDefault();
+    const data = Object.fromEntries(new FormData(e.currentTarget));
+    if (data._honey) return; // champ piège anti-spam rempli = robot
     setSending(true);
-    setTimeout(() => {
-      setSending(false);
+    try {
+      const res = await fetch(`https://formsubmit.co/ajax/${CONTACT_EMAIL}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          subject: data.subject,
+          message: data.message,
+          _subject: `lmgt.eu — ${data.subject}`,
+          _replyto: data.email,
+          _template: "table",
+          langue: lang,
+        }),
+      });
+      const json = await res.json().catch(() => ({}));
+      if (!res.ok || String(json.success) !== "true") throw new Error(json.message || res.statusText);
       toast.success(f.success);
       formRef.current?.reset();
-    }, 1200);
+    } catch {
+      toast.error(f.error);
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -285,7 +309,11 @@ export function Contact() {
         <label className="block"><span className="sr-only">{f.email}</span><input required type="email" name="email" placeholder={f.email} className={fieldClass} /></label>
         <label className="block md:col-span-2"><span className="sr-only">{f.subject}</span><input required name="subject" placeholder={f.subject} className={fieldClass} /></label>
         <label className="block md:col-span-2"><span className="sr-only">{f.message}</span><textarea required rows={5} name="message" placeholder={f.message} className={`${fieldClass} resize-none`} /></label>
-        <div className="md:col-span-2 flex justify-end mt-[var(--s30)]">
+        <input type="text" name="_honey" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" />
+        <div className="md:col-span-2 flex flex-wrap items-center justify-between gap-[var(--s15)] mt-[var(--s30)]">
+          <p className="text-[15px] font-medium">
+            {f.direct} <a href={`mailto:${CONTACT_EMAIL}`} className="font-semibold underline underline-offset-[5px] decoration-1">{CONTACT_EMAIL}</a>
+          </p>
           <button type="submit" disabled={sending} className="group flex items-center gap-[15px] text-[18px] font-semibold disabled:opacity-50">
             {sending ? f.sending : f.send}
             <ArrowBox />
