@@ -18,7 +18,7 @@ export default function Footer() {
           </div>
 
           <p className="text-sm text-muted-foreground font-inter">
-            © {new Date().getFullYear()} — Laurine Megane Gbahe Taho — LMGT<span className="text-primary">.</span>
+            © {new Date().getFullYear()} — Laurine Gbahe Taho — LMGT<span className="text-primary">.</span>
           </p>
 
           <div className="flex items-center gap-6">

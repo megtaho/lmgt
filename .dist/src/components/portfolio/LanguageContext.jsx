@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
 
 const LanguageContext = createContext();
 
@@ -16,7 +16,7 @@ export const translations = {
       heading1: "I craft",
       heading2: "digital",
       heading3: "experiences",
-      subtitle: "Laurine Megane Gbahe Taho — Full-stack web developer & social media strategist. I build stunning websites and help brands grow their online presence.",
+      subtitle: "Laurine Gbahe Taho — Full-stack web developer & social media strategist. I build stunning websites and help brands grow their online presence.",
       cta1: "View My Work",
       cta2: "About Me",
       leftLabel: "Web Development",
@@ -26,7 +26,7 @@ export const translations = {
       sectionLabel: "01 — About",
       heading1: "Building the web,",
       heading2: "one pixel at a time.",
-      p1: "I'm Laurine Megane Gbahe Taho — a creative developer & content strategist based in Paris. I build high-performance websites and teach brands how to dominate social media.",
+      p1: "I'm Laurine Gbahe Taho — a creative developer & content strategist based in Paris. I build high-performance websites and teach brands how to dominate social media.",
       p2: "With a deep focus on motion design, modern frameworks and social media growth, I help startups and creators stand out online.",
       stats: [
         { number: "8+", label: "Years Experience" },
@@ -72,7 +72,7 @@ export const translations = {
       success: "Message sent! I'll get back to you soon.",
     },
     footer: {
-      rights: "Laurine Megane Gbahe Taho",
+      rights: "Laurine Gbahe Taho",
     },
   },
   fr: {
@@ -88,7 +88,7 @@ export const translations = {
       heading1: "Je crée des",
       heading2: "expériences",
       heading3: "digitales",
-      subtitle: "Laurine Megane Gbahe Taho — Développeuse web full-stack & stratège en réseaux sociaux. Je construis des sites web et aide les marques à booster leur présence en ligne.",
+      subtitle: "Laurine Gbahe Taho — Développeuse web full-stack & stratège en réseaux sociaux. Je construis des sites web et aide les marques à booster leur présence en ligne.",
       cta1: "Voir mes projets",
       cta2: "En savoir plus",
       leftLabel: "Développement Web",
@@ -98,7 +98,7 @@ export const translations = {
       sectionLabel: "01 — À propos",
       heading1: "Construire le web,",
       heading2: "un pixel à la fois.",
-      p1: "Je suis Laurine Megane Gbahe Taho — développeuse web créative & stratège en contenu basée à Paris. Je crée des sites performants et j'aide les marques à dominer les réseaux sociaux.",
+      p1: "Je suis Laurine Gbahe Taho — développeuse web créative & stratège en contenu basée à Paris. Je crée des sites performants et j'aide les marques à dominer les réseaux sociaux.",
       p2: "Avec une expertise en motion design, frameworks modernes et croissance sociale, j'aide les startups et créateurs à se démarquer en ligne.",
       stats: [
         { number: "8+", label: "Ans d'expérience" },
@@ -144,14 +144,32 @@ export const translations = {
       success: "Message envoyé ! Je vous réponds très vite.",
     },
     footer: {
-      rights: "Laurine Megane Gbahe Taho",
+      rights: "Laurine Gbahe Taho",
     },
   },
 };
 
+const SUPPORTED = ["fr", "en", "es"];
+
+// Langue du navigateur du visiteur (fr / en / es), anglais par défaut sinon
+function detectLang() {
+  if (typeof navigator === "undefined") return "fr";
+  const prefs = navigator.languages?.length ? navigator.languages : [navigator.language];
+  for (const l of prefs) {
+    const code = (l || "").slice(0, 2).toLowerCase();
+    if (SUPPORTED.includes(code)) return code;
+  }
+  return "en";
+}
+
 export function LanguageProvider({ children }) {
-  const [lang, setLang] = useState("fr");
-  const t = translations[lang];
+  const [lang, setLang] = useState(detectLang);
+
+  useEffect(() => {
+    document.documentElement.lang = lang;
+  }, [lang]);
+
+  const t = translations[lang] ?? translations.en;
   return (
     <LanguageContext.Provider value={{ lang, setLang, t }}>
       {children}

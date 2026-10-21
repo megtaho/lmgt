@@ -1,0 +1,202 @@
+// Contenu FR/EN de la home (style mount.jp)
+export const content = {
+  fr: {
+    menu: "Menu",
+    close: "Fermer",
+    contact: "Contact & demandes",
+    hero: { play: "Tout voir", caption: "Web & Réseaux sociaux", labels: ["Développement web", "Réseaux sociaux", "Commerce & réseaux"] },
+    intro:
+      "LMGT est le studio indépendant de Laurine Gbahe Taho et Benny Tenezeu, basé à Paris. Nous lisons l'essence de votre marque pour lui donner forme sur le web : stratégie, design d'interface, développement full-stack, motion, contenus et croissance sur les réseaux sociaux. Du conseil à la réalisation, avec un regard unique et cohérent, nous créons des expériences qui font comprendre la valeur de votre projet.",
+    index: [
+      { id: "about", title: "À propos", text: ["Ce qui compte pour nous", "dans chaque projet"] },
+      { id: "services", title: "Services", text: ["Tout ce que nous proposons,", "du code au contenu"] },
+      { id: "projects", title: "Projets", text: ["Des réalisations où nous avons", "réellement résolu un problème"] },
+      { id: "contact", title: "Contact", text: ["Parlons de votre projet", "et de vos enjeux"] },
+    ],
+    about: {
+      heading: "À propos",
+      lead: "Construire le web, un pixel à la fois.",
+      p: "Nous sommes deux ingénieurs basés à Paris. Ensemble, nous créons des sites et des apps performants, et nous aidons les marques à se démarquer sur les réseaux sociaux. Avec une expertise en motion design, frameworks modernes et croissance sociale, nous accompagnons startups et créateurs pour qu'ils existent vraiment en ligne.",
+      team: [
+        { name: "Laurine Gbahe Taho", role: "Co-fondatrice", text: "Ingénieure systèmes numériques industriels, développeuse web créative & stratège en contenu. Elle conçoit des sites performants et fait grandir les marques sur les réseaux sociaux." },
+        { name: "Benny Tenezeu", role: "Co-fondateur", text: "Développeur et DevOps chez Transactis, co-fondateur d'ElearnPrepa, ingénieur logiciel chez Zymoptiq." },
+      ],
+      stats: [
+        { number: "8+", label: "Ans d'expérience" },
+        { number: "70+", label: "Projets livrés" },
+        { number: "40+", label: "Clients" },
+        { number: "99%", label: "Satisfaction" },
+      ],
+    },
+    services: {
+      heading: "Services",
+      items: [
+        { title: "Création de sites et applications", text: "Sites vitrines, boutiques en ligne et applications web ou mobiles, rapides et faciles à utiliser.", tags: ["React", "Next.js", "TypeScript", "Tailwind"] },
+        { title: "Motion & Animation", text: "Expériences web immersives et fluides.", tags: ["Framer Motion", "GSAP", "Three.js"] },
+        { title: "Backend & APIs", text: "Solutions full-stack de bout en bout.", tags: ["Node.js", "Python", "PostgreSQL"] },
+        { title: "Stratégie Réseaux Sociaux", text: "Planification, communauté et stratégie virale.", tags: ["Instagram", "TikTok", "LinkedIn"] },
+        { title: "Création de Contenu", text: "Montage vidéo, storytelling, voix de marque, coaching.", tags: ["Vidéo", "Storytelling", "Coaching"] },
+        { title: "Performance & SEO", text: "Optimisé pour la vitesse et la visibilité.", tags: ["Core Web Vitals", "SEO", "Accessibilité"] },
+      ],
+    },
+    projects: {
+      heading: "Projets",
+      hint: "Cliquez sur une face pour visiter le site — glissez pour faire tourner le cube.",
+      yours: { title: "Votre projet ?", text: "Parlons-en" },
+      items: [
+        { place: "Cameroun", title: "D-One Equipment — site vitrine d'un loueur d'engins de chantier : chargeuses, pelles et opérateurs qualifiés.", category: "Site vitrine", url: "https://donequipment.com/", image: "/projects/donequipment.jpg" },
+        { place: "Cameroun", title: "Elearn Prepa — site de l'app éducative : photo d'exercice, corrigé pas à pas, missions quotidiennes et vidéos.", category: "App mobile & site", url: "https://elearnprepa.com/", image: "/projects/elearnprepa.jpg" },
+        { place: "États-Unis", title: "CODG, inc — site d'un cabinet d'architecture design & build : maisons sur mesure, démarche et réalisations.", category: "Architecture", url: "https://codginc.com/", image: "/projects/codg.jpg" },
+        { title: "Les Gawas — portfolio d'influenceuses : profils, univers et contenus présentés aux marques.", category: "Portfolio influenceuses", url: "https://www.lesgawas.com/", image: "/projects/lesgawas.jpg" },
+        { place: "Espagne", title: "Alameda — e-shop d'une marque de mode barcelonaise, collections éthiques en tissus deadstock.", category: "E-commerce mode", url: "https://alameda-brand.com/", image: "/projects/alameda.jpg" },
+      ],
+    },
+    form: {
+      heading: "Écrire un message",
+      name: "Nom", email: "Email", subject: "Sujet", message: "Message",
+      send: "Envoyer", sending: "Envoi…", success: "Message envoyé ! Nous vous répondons très vite.",
+    },
+    footer: {
+      cta: "Le but n'est pas de fabriquer, mais de résoudre. Racontez-nous d'abord votre problème.",
+      ctaLink: "Nous contacter",
+      newsletter: "Nouveaux projets, conseils et actualités, directement par email.",
+      newsletterLink: "Newsletter",
+      location: "partout dans le monde",
+    },
+  },
+  en: {
+    menu: "Menu",
+    close: "Close",
+    contact: "Contact & inquiries",
+    hero: { play: "Watch all", caption: "Web & Social media", labels: ["Web Development", "Social Media", "Retail & social"] },
+    intro:
+      "LMGT is the independent studio of Laurine Gbahe Taho and Benny Tenezeu, based in Paris. We decode the essence of your brand and give it shape on the web: strategy, interface design, full-stack development, motion, content and social media growth. From advice to execution, with one consistent point of view, we build experiences that make the value of your project clear.",
+    index: [
+      { id: "about", title: "About", text: ["What matters to us", "in every project"] },
+      { id: "services", title: "Services", text: ["Everything we offer,", "from code to content"] },
+      { id: "projects", title: "Projects", text: ["Work where we truly", "solved a problem"] },
+      { id: "contact", title: "Contact", text: ["Let's talk about", "your project"] },
+    ],
+    about: {
+      heading: "About",
+      lead: "Building the web, one pixel at a time.",
+      p: "We are two engineers based in Paris. Together we build high-performance websites and apps, and help brands stand out on social media. With a deep focus on motion design, modern frameworks and social growth, we help startups and creators truly exist online.",
+      team: [
+        { name: "Laurine Gbahe Taho", role: "Co-founder", text: "Industrial digital systems engineer, creative web developer & content strategist. She designs high-performance websites and grows brands on social media." },
+        { name: "Benny Tenezeu", role: "Co-founder", text: "Developer and DevOps at Transactis, co-founder of ElearnPrepa, software engineer at Zymoptiq." },
+      ],
+      stats: [
+        { number: "8+", label: "Years experience" },
+        { number: "70+", label: "Projects delivered" },
+        { number: "40+", label: "Clients" },
+        { number: "99%", label: "Satisfaction" },
+      ],
+    },
+    services: {
+      heading: "Services",
+      items: [
+        { title: "Websites & apps", text: "Showcase sites, online stores and web or mobile apps that are fast and easy to use.", tags: ["React", "Next.js", "TypeScript", "Tailwind"] },
+        { title: "Motion & Animation", text: "Immersive, smooth web experiences.", tags: ["Framer Motion", "GSAP", "Three.js"] },
+        { title: "Backend & APIs", text: "Full-stack, end to end.", tags: ["Node.js", "Python", "PostgreSQL"] },
+        { title: "Social Media Strategy", text: "Planning, community and viral strategy.", tags: ["Instagram", "TikTok", "LinkedIn"] },
+        { title: "Content Creation", text: "Video editing, storytelling, brand voice, coaching.", tags: ["Video", "Storytelling", "Coaching"] },
+        { title: "Performance & SEO", text: "Optimized for speed and discovery.", tags: ["Core Web Vitals", "SEO", "Accessibility"] },
+      ],
+    },
+    projects: {
+      heading: "Projects",
+      hint: "Click a face to visit the site — drag to spin the cube.",
+      yours: { title: "Your project?", text: "Let's talk" },
+      items: [
+        { place: "Cameroon", title: "D-One Equipment — showcase site for a construction equipment rental company: loaders, excavators and qualified operators.", category: "Showcase site", url: "https://donequipment.com/", image: "/projects/donequipment.jpg" },
+        { place: "Cameroon", title: "Elearn Prepa — site for an education app: snap a problem, get step-by-step solutions, daily missions and videos.", category: "Mobile app & site", url: "https://elearnprepa.com/", image: "/projects/elearnprepa.jpg" },
+        { place: "United States", title: "CODG, inc — site for a design & build architecture firm: custom homes, process and portfolio.", category: "Architecture", url: "https://codginc.com/", image: "/projects/codg.jpg" },
+        { title: "Les Gawas — influencer portfolio: profiles, styles and content presented to brands.", category: "Influencer portfolio", url: "https://www.lesgawas.com/", image: "/projects/lesgawas.jpg" },
+        { place: "Spain", title: "Alameda — online store for a Barcelona fashion brand, ethical collections made from deadstock fabrics.", category: "Fashion e-commerce", url: "https://alameda-brand.com/", image: "/projects/alameda.jpg" },
+      ],
+    },
+    form: {
+      heading: "Write a message",
+      name: "Name", email: "Email", subject: "Subject", message: "Message",
+      send: "Send", sending: "Sending…", success: "Message sent! We'll get back to you soon.",
+    },
+    footer: {
+      cta: "The goal isn't to make things, it's to solve problems. Start by telling us yours.",
+      ctaLink: "Get in touch",
+      newsletter: "New work, tips and news, straight to your inbox.",
+      newsletterLink: "Newsletter",
+      location: "worldwide",
+    },
+  },
+  es: {
+    menu: "Menú",
+    close: "Cerrar",
+    contact: "Contacto y solicitudes",
+    hero: { play: "Ver todo", caption: "Web y redes sociales", labels: ["Desarrollo web", "Redes sociales", "Comercio y redes"] },
+    intro:
+      "LMGT es el estudio independiente de Laurine Gbahe Taho y Benny Tenezeu, con sede en París. Descubrimos la esencia de tu marca para darle forma en la web: estrategia, diseño de interfaces, desarrollo full-stack, motion, contenidos y crecimiento en redes sociales. Del asesoramiento a la ejecución, con una mirada única y coherente, creamos experiencias que transmiten el valor de tu proyecto.",
+    index: [
+      { id: "about", title: "Nosotros", text: ["Lo que nos importa", "en cada proyecto"] },
+      { id: "services", title: "Servicios", text: ["Todo lo que ofrecemos,", "del código al contenido"] },
+      { id: "projects", title: "Proyectos", text: ["Trabajos en los que", "resolvimos un problema real"] },
+      { id: "contact", title: "Contacto", text: ["Hablemos de", "tu proyecto"] },
+    ],
+    about: {
+      heading: "Nosotros",
+      lead: "Construimos la web, píxel a píxel.",
+      p: "Somos dos ingenieros con sede en París. Juntos creamos sitios web y apps de alto rendimiento, y ayudamos a las marcas a destacar en redes sociales. Con experiencia en motion design, frameworks modernos y crecimiento social, acompañamos a startups y creadores para que existan de verdad en línea.",
+      team: [
+        { name: "Laurine Gbahe Taho", role: "Cofundadora", text: "Ingeniera de sistemas digitales industriales, desarrolladora web creativa y estratega de contenidos. Diseña sitios de alto rendimiento y hace crecer las marcas en redes sociales." },
+        { name: "Benny Tenezeu", role: "Cofundador", text: "Desarrollador y DevOps en Transactis, cofundador de ElearnPrepa, ingeniero de software en Zymoptiq." },
+      ],
+      stats: [
+        { number: "8+", label: "Años de experiencia" },
+        { number: "70+", label: "Proyectos entregados" },
+        { number: "40+", label: "Clientes" },
+        { number: "99%", label: "Satisfacción" },
+      ],
+    },
+    services: {
+      heading: "Servicios",
+      items: [
+        { title: "Creación de sitios web y aplicaciones", text: "Sitios corporativos, tiendas online y aplicaciones web o móviles, rápidos y fáciles de usar.", tags: ["React", "Next.js", "TypeScript", "Tailwind"] },
+        { title: "Motion y animación", text: "Experiencias web inmersivas y fluidas.", tags: ["Framer Motion", "GSAP", "Three.js"] },
+        { title: "Backend y APIs", text: "Soluciones full-stack de principio a fin.", tags: ["Node.js", "Python", "PostgreSQL"] },
+        { title: "Estrategia en redes sociales", text: "Planificación, comunidad y estrategia viral.", tags: ["Instagram", "TikTok", "LinkedIn"] },
+        { title: "Creación de contenido", text: "Edición de vídeo, storytelling, voz de marca, coaching.", tags: ["Vídeo", "Storytelling", "Coaching"] },
+        { title: "Rendimiento y SEO", text: "Optimizado para la velocidad y la visibilidad.", tags: ["Core Web Vitals", "SEO", "Accesibilidad"] },
+      ],
+    },
+    projects: {
+      heading: "Proyectos",
+      hint: "Haz clic en una cara para visitar el sitio — arrastra para girar el cubo.",
+      yours: { title: "¿Tu proyecto?", text: "Hablemos" },
+      items: [
+        { place: "Camerún", title: "D-One Equipment — sitio corporativo de una empresa de alquiler de maquinaria de obra: cargadoras, excavadoras y operadores cualificados.", category: "Sitio corporativo", url: "https://donequipment.com/", image: "/projects/donequipment.jpg" },
+        { place: "Camerún", title: "Elearn Prepa — sitio de una app educativa: foto del ejercicio, corrección paso a paso, misiones diarias y vídeos.", category: "App móvil y sitio", url: "https://elearnprepa.com/", image: "/projects/elearnprepa.jpg" },
+        { place: "Estados Unidos", title: "CODG, inc — sitio de un estudio de arquitectura design & build: casas a medida, proceso y portfolio.", category: "Arquitectura", url: "https://codginc.com/", image: "/projects/codg.jpg" },
+        { title: "Les Gawas — portfolio de influencers: perfiles, estilos y contenidos presentados a las marcas.", category: "Portfolio de influencers", url: "https://www.lesgawas.com/", image: "/projects/lesgawas.jpg" },
+        { place: "España", title: "Alameda — tienda online de una marca de moda de Barcelona, colecciones éticas con tejidos deadstock.", category: "E-commerce de moda", url: "https://alameda-brand.com/", image: "/projects/alameda.jpg" },
+      ],
+    },
+    form: {
+      heading: "Escríbenos",
+      name: "Nombre", email: "Email", subject: "Asunto", message: "Mensaje",
+      send: "Enviar", sending: "Enviando…", success: "¡Mensaje enviado! Te responderemos muy pronto.",
+    },
+    footer: {
+      cta: "El objetivo no es fabricar, sino resolver. Cuéntanos primero tu problema.",
+      ctaLink: "Contáctanos",
+      newsletter: "Nuevos proyectos, consejos y novedades, directamente en tu email.",
+      newsletterLink: "Newsletter",
+      location: "en todo el mundo",
+    },
+  },
+};
+
+export const SOCIALS = [
+  { label: "Instagram", href: "https://instagram.com" },
+  { label: "LinkedIn", href: "https://linkedin.com" },
+  { label: "GitHub", href: "https://github.com" },
+  { label: "X", href: "https://x.com" },
+];
