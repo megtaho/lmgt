@@ -27,7 +27,7 @@ export function Hero() {
 
   return (
     <Spread aria-label="Showreel" className="pt-[calc(var(--head)+var(--s30))]">
-      <div className="relative w-full aspect-[378/560] md:aspect-video overflow-hidden bg-[var(--hover)]">
+      <div className="studio-hero-media relative w-full overflow-hidden bg-[var(--hover)]">
         <AnimatePresence mode="sync">
           <motion.video
             key={current}

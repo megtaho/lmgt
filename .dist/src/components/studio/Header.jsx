@@ -56,8 +56,8 @@ export default function Header() {
         className={`fixed inset-x-0 top-0 z-50 h-[var(--head)] bg-white border-b border-[var(--line)] transition-transform duration-500 [transition-timing-function:cubic-bezier(0,0.5,0,1)] ${hidden && !open ? "-translate-y-full" : ""}`}
       >
         <div className="h-full px-[var(--edge)] flex items-end justify-between pb-[22px]">
-          <Logo className="text-[40px] md:text-[46px]" />
-          <div className="flex items-center gap-[var(--s30)] pb-[2px]">
+          <Logo className="text-[32px] min-[400px]:text-[40px] md:text-[46px]" />
+          <div className="flex items-center gap-[var(--s15)] min-[400px]:gap-[var(--s30)] pb-[2px]">
             <FlagSwitch lang={lang} setLang={setLang} />
             <button type="button" onClick={() => setOpen(true)} aria-label={c.menu} aria-expanded={open} className="hover:opacity-50 transition-opacity">
               <BurgerIcon />
@@ -79,7 +79,7 @@ export default function Header() {
             className="fixed inset-0 z-[60] bg-white overflow-y-auto"
           >
             <div className="h-[var(--head)] px-[var(--edge)] flex items-end justify-between pb-[22px] border-b border-[var(--line)]">
-              <Logo className="text-[40px] md:text-[46px]" />
+              <Logo className="text-[32px] min-[400px]:text-[40px] md:text-[46px]" />
               <button type="button" onClick={() => setOpen(false)} className="text-[18px] font-semibold hover:opacity-50 transition-opacity">
                 {c.close}
               </button>
