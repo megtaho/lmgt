@@ -1,6 +1,6 @@
 import React from "react";
 import { useLang } from "@/components/portfolio/LanguageContext";
-import { content, SOCIALS } from "./content";
+import { content } from "./content";
 import { ArrowBox, LangSwitch, Spread } from "./Primitives";
 import { Logo } from "./Header";
 
@@ -34,7 +34,7 @@ export default function Footer() {
         <img src={FOOTER_IMAGE} alt="" loading="lazy" className="w-full h-full object-cover" />
       </figure>
 
-      <Spread as="div" className="py-[var(--s60)] grid md:grid-cols-[1fr_auto_auto] gap-x-[var(--gap)] gap-y-[var(--s60)]">
+      <Spread as="div" className="pt-[var(--s60)] pb-[110px] grid md:grid-cols-[1fr_auto] gap-x-[var(--gap)] gap-y-[var(--s60)]">
         <div className="flex flex-col justify-between gap-[var(--s30)]">
           <Logo className="text-[72px] md:text-[96px]" />
           <p className="text-[13px] font-semibold opacity-50">
@@ -51,16 +51,6 @@ export default function Footer() {
           </ul>
           <LangSwitch lang={lang} setLang={setLang} />
         </nav>
-        <ul className="flex flex-col gap-[10px]">
-          {SOCIALS.map((s) => (
-            <li key={s.label}>
-              <a href={s.href} target="_blank" rel="noopener noreferrer" className="group flex items-center gap-[8px] text-[15px] font-semibold">
-                {s.label}
-                <ArrowBox size="xs" external />
-              </a>
-            </li>
-          ))}
-        </ul>
       </Spread>
     </footer>
   );

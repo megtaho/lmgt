@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useLang } from "@/components/portfolio/LanguageContext";
-import { content, SOCIALS } from "./content";
+import { content } from "./content";
 import { ArrowBox, FlagSwitch, LangSwitch } from "./Primitives";
 
 export function Logo({ className = "" }) {
@@ -103,16 +103,6 @@ export default function Header() {
               </ul>
               <div className="flex flex-col gap-[var(--s30)] md:items-end">
                 <LangSwitch lang={lang} setLang={setLang} />
-                <ul className="flex flex-wrap gap-[15px]">
-                  {SOCIALS.map((s) => (
-                    <li key={s.label}>
-                      <a href={s.href} target="_blank" rel="noopener noreferrer" className="group flex items-center gap-[8px] text-[15px] font-semibold">
-                        {s.label}
-                        <ArrowBox size="xs" external />
-                      </a>
-                    </li>
-                  ))}
-                </ul>
               </div>
             </nav>
           </motion.div>

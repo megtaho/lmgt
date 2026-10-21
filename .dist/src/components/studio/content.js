@@ -199,10 +199,3 @@ export const content = {
     },
   },
 };
-
-export const SOCIALS = [
-  { label: "Instagram", href: "https://instagram.com" },
-  { label: "LinkedIn", href: "https://linkedin.com" },
-  { label: "GitHub", href: "https://github.com" },
-  { label: "X", href: "https://x.com" },
-];
