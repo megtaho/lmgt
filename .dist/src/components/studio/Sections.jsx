@@ -12,6 +12,10 @@ const VIDEOS = [
   "https://videos.pexels.com/video-files/7667424/7667424-uhd_4096_2160_25fps.mp4",
 ];
 
+// Vitesse de lecture par vidéo (1 = normale) : la vidéo développement web est accélérée
+const SPEEDS = [2, 1, 1];
+const applySpeed = (i) => (e) => { e.currentTarget.playbackRate = SPEEDS[i] ?? 1; };
+
 const reveal = {
   initial: { opacity: 0, y: 24 },
   whileInView: { opacity: 1, y: 0 },
@@ -33,6 +37,8 @@ export function Hero() {
             key={current}
             src={VIDEOS[current]}
             autoPlay muted playsInline
+            onLoadedMetadata={applySpeed(current)}
+            onPlay={applySpeed(current)}
             onEnded={() => setCurrent((p) => (p + 1) % VIDEOS.length)}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -102,7 +108,7 @@ export function Hero() {
             onClick={() => setPlayer(false)}
           >
             <div className="w-full max-w-[1400px]" onClick={(e) => e.stopPropagation()}>
-              <video src={VIDEOS[current]} autoPlay controls playsInline className="w-full aspect-video bg-black" />
+              <video src={VIDEOS[current]} onLoadedMetadata={applySpeed(current)} autoPlay controls playsInline className="w-full aspect-video bg-black" />
               <button type="button" onClick={() => setPlayer(false)} className="mt-[var(--s15)] text-white text-[18px] font-semibold hover:opacity-60">
                 {content[lang].close}
               </button>
